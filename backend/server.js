@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/api/deploy-strategy', (req, res) => {
+app.post('/deploy-strategy', (req, res) => {
     const { fullName, company, email, adSpend, goal } = req.body;
 
     // 2. High-Performance HTML Email Template
@@ -70,7 +70,7 @@ app.post('/api/deploy-strategy', (req, res) => {
 });
 
 // --- New Endpoint for Footer Email Opt-in ---
-app.post('/api/footer-lead', (req, res) => {
+app.post('/footer-lead', (req, res) => {
     const { email } = req.body;
 
     const mailOptions = {
